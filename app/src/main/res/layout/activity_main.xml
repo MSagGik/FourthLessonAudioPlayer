@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFCF7"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="ПРИЛОЖЕНИЕ ПЛЕЙЕР"
+        android:textColor="#B55807"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textOut"
+        android:layout_width="380dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="21dp"
+        android:background="#FFF4CD"
+        android:gravity="center"
+        android:hint="Название мелодии"
+        android:textColor="#9E590E"
+        android:textColorHint="#BD6C14"
+        android:textSize="19sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textOut">
+
+        <Button
+            android:id="@+id/btnResume"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F49F05"
+            android:padding="14dp"
+            android:onClick="onClick"
+            android:text="ВОСПРОИЗВЕСТИ" />
+
+        <Button
+            android:id="@+id/btnPause"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F49F05"
+            android:padding="14dp"
+            android:onClick="onClick"
+            android:text="ПАУЗА" />
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F49F05"
+            android:padding="14dp"
+            android:onClick="onClick"
+            android:text="СТОП" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#CD7402"
+            android:padding="14dp"
+            android:onClick="onClick"
+            android:text="НАЗАД" />
+
+        <Button
+            android:id="@+id/btnForward"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#CD7402"
+            android:padding="14dp"
+            android:onClick="onClick"
+            android:text="ВПЕРЁД" />
+
+        <Switch
+            android:id="@+id/switchLoop"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="#FFD281"
+            android:padding="14dp"
+            android:text="ПОВТОР"
+            android:textColor="#9E590E"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:layout_marginTop="5dp"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="ИСТОЧНИК"
+        android:textColor="#B55807"
+        android:textSize="19sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="21dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <Button
+            android:id="@+id/btnStream"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="#F49F05"
+            android:text="Интернет"
+            android:onClick="onClickSource"
+            android:textColor="#9E590E"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/btnRAW"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F49F05"
+            android:text="Телефон"
+            android:onClick="onClickSource"
+            android:textColor="#9E590E"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/btnSD"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="#F49F05"
+            android:text="SD карта"
+            android:onClick="onClickSource"
+            android:textColor="#9E590E"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

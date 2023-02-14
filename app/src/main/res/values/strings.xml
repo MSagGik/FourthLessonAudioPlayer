@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FourthLessonAudioPlayer</string>
+    <string name="http">HTTP</string>
+    <string name="stream">Поток</string>
+    <string name="sd">SD карта</string>
+    <string name="uri">Интернет</string>
+    <string name="raw">Память устройства</string>
+    <string name="pause">ПАУЗА</string>
+    <string name="resume">ВОСПРОИЗВЕДЕНИЕ</string>
+    <string name="stop">СТОП</string>
+    <string name="loop">ПОВТОР</string>
+    <string name="backward">НАЗАД</string>
+    <string name="forward">ВПЕРЁД</string>
+    <string name="info">ИНФОРМАЦИЯ</string>
+</resources>
