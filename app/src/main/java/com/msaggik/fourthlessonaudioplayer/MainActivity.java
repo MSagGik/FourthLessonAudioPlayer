@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnPre
     private final String DATA_SD = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC) + "/music.mp3"; // патч на аудио-файл с SD-карты
     private String nameAudio = ""; // название контента
 
-    private MediaPlayer mediaPlayer; // создание поля медиа-плейера
+    private MediaPlayer mediaPlayer; // создание поля медиа-плеера
     private AudioManager audioManager; // создание поля аудио-менеджера
     private Toast toast; // создание поля тоста
 
@@ -70,10 +70,10 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnPre
                     // размещаем тост (контекст, сообщение, длительность сообщения)
                     toast = Toast.makeText(this, "Запущен поток аудио", Toast.LENGTH_SHORT); // инициализация
                     toast.show(); // демонстрация тоста на экране
-                    mediaPlayer = new MediaPlayer(); // создание объекта медиа-плейера
+                    mediaPlayer = new MediaPlayer(); // создание объекта медиа-плеера
                     mediaPlayer.setDataSource(DATA_STREAM); // указание источника аудио
                     mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC); // задает аудио-поток, который будет использован для проигрывания
-                    mediaPlayer.setOnPreparedListener(this); // ассинхронная подготовка плейера к проигрыванию
+                    mediaPlayer.setOnPreparedListener(this); // ассинхронная подготовка плеера к проигрыванию
                     mediaPlayer.prepareAsync(); // ассинхронная подготовка плейера к проигрыванию
                     nameAudio = "РАДИО"; // инициализация названия контента
                     break;
@@ -89,11 +89,11 @@ public class MainActivity extends AppCompatActivity implements MediaPlayer.OnPre
                     // код выполнения кнопки btnSD
                     toast = Toast.makeText(this, "Запущен аудио-файл с SD-карты", Toast.LENGTH_SHORT); // инициализация
                     toast.show(); // демонстрация тоста на экране
-                    mediaPlayer = new MediaPlayer(); // создание объекта медиа-плейера
+                    mediaPlayer = new MediaPlayer(); // создание объекта медиа-плеера
                     mediaPlayer.setDataSource(DATA_SD); // указание источника аудио
                     mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC); // подключение аудио-менеджера
-                    mediaPlayer.prepare(); // ассинхронная подготовка плейера к проигрыванию
-                    mediaPlayer.start(); // ассинхронная подготовка плейера к проигрыванию
+                    mediaPlayer.prepare(); // ассинхронная подготовка плеера к проигрыванию
+                    mediaPlayer.start(); // ассинхронная подготовка плеера к проигрыванию
                     break;
             }
         } catch (IOException e) { // исключение ввода / вывода
